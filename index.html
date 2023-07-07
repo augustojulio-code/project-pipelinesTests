@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário</title>
+  <script>
+    function validarFormulario() {
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var cep = document.getElementById("cep").value;
+      var estado = document.getElementById("estado").value;
+
+      if (nome === '' || email === '' || cep === '' || estado === '') {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+      }
+      else {
+        alert("Campos preenchidos. Enviando formulário...");
+        return true;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validarFormulario()">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" required><br>
+
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" name="estado" required><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
