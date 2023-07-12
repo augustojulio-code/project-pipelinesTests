@@ -6,40 +6,40 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.juliocode.pages.HomePage;
+import com.juliocode.pages.ResultPage;
+
 public class StepsAmazon {
-    WebDriver driver;
+    private WebDriver driver;
 
     @Before
     public void before() {
 
         driver = new ChromeDriver();
-        // driver.get("https://www.amazon.com.br/");
     }
 
-    /*
-     * @Test
-     * public void openBrowwser() {
-     * driver.get("https://www.amazon.com.br/");
-     * }
-     */
-
     @Given("esteja na pagina : {string}")
-    public void esteja_na_pagina(String string) {
-        driver.get(string);
+    public void esteja_na_pagina(String url) {
+        driver.get(url);
 
     }
 
     @When("fazer busca por : {string}")
-    public void fazer_busca_por(String string) {
-        System.out.println("" + string);
+    public void fazer_busca_por(String item) {
+        HomePage page = new HomePage(driver);
+        page.searchItem(item);
     }
 
     @Then("Verificar valor acima de : {string}")
-    public void verificar_valor_acima_de(String string) {
-        System.out.println("" + string);
+    public void verificar_valor_acima_de(String priceItem) {
+        ResultPage resultPage = new ResultPage(driver);
+        resultPage.resulrSearch();
+
+        Assert.assertEquals(priceItem, resultPage.returnResulString());
     }
 
     @After
