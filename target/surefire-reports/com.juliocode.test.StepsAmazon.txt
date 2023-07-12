@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.juliocode.test.FillFormTest
+Test set: com.juliocode.test.StepsAmazon
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.701 s - in com.juliocode.test.FillFormTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.705 s - in com.juliocode.test.StepsAmazon

@@ -7,8 +7,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false, plugin = { "pretty" }, features = {
-                "src\\test\\java\\com\\juliocode\\feature" }, glue = {
-                                "com.juliocode.test" })
+        "src\\test\\resources" }, glue = {
+                "com.juliocode.test" })
 public class CucumberRunner {
 
 }
