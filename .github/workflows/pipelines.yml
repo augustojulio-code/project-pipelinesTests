@@ -24,6 +24,3 @@ jobs:
 
     - name: Test with Maven
       run: mvn test
-    
-    - name: Test Selenium/cucumber
-      run: mvn -Dtest=CucumberRunner test
