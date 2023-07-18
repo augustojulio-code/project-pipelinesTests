@@ -21,9 +21,15 @@ public class FillFormTest {
 
     @Test
     public void fillForm() {
-        driver.get("https://www.google.com.br/");
 
-        driver.findElement(By.name("q")).sendKeys("Reddit", Keys.ENTER);
+        try {
+            driver.get("https://www.google.com.br/");
+
+            driver.findElement(By.name("q")).sendKeys("Reddit", Keys.ENTER);
+        } catch (Exception e) {
+            System.out.println("Erro: " + e);
+        }
+
         /*
          * driver.findElement(By.name("email")).sendKeys("jose@gmail");
          * driver.findElement(By.name("cep")).sendKeys("123456");
@@ -34,6 +40,11 @@ public class FillFormTest {
 
     @After
     public void closeTab() {
-        driver.quit();
+        try {
+            driver.quit();
+        } catch (Exception e) {
+            System.out.println("Erro: " + e);
+        }
+
     }
 }
