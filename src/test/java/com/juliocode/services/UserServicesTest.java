@@ -1,6 +1,6 @@
 package com.juliocode.services;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ public class UserServicesTest {
 
     @Test
     public void testCalc() {
-        assertTrue("Teste Calculador", uServices.calc());
+        assertEquals(true, uServices.calc());
     }
 
     @Test
