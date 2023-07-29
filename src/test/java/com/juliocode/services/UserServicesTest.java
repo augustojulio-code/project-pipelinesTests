@@ -13,19 +13,8 @@ public class UserServicesTest {
     }
 
     @Test
-    public void testGetNumber() {
-
-        uServices.getNumber();
-
+    public void testValidation() {
+        assertEquals("Olá imbecil".toLowerCase(), uServices.validationTest().toLowerCase());
     }
 
-    @Test
-    public void testGetName() {
-        uServices.getName();
-    }
-
-    @Test
-    public void testUserData() {
-        uServices.userData();
-    }
 }

@@ -15,17 +15,8 @@ public class UserServices {
 
     }
 
-    public int getNumber() {
-
-        return user.getNumero();
-    }
-
-    public String getName() {
-        return user.getName();
-    }
-
-    public String userData() {
-        return "" + user.getNumero() + user.getName();
+    public String validationTest() {
+        return "Olá imbecil";
     }
 
 }
